@@ -1,6 +1,6 @@
-# API ve Veri Bilimi Öğrenme(Basit)🚀
+# API ve Veri Bilimi Öğrenme(Basit Düzey) 🚀
 
-Bu proje, Python dünyasındaki modern API geliştirme araçlarını (FastAPI) ve veri analizi kütüphanelerini (Pandas, Numpy, Matplotlib, Seaborn) öğrenmek amacıyla oluşturulmuş bir çalışma alanıdır. Bu projedeki her şey alanının temel yapıtaşlarına hakim olmak içindir.
+Bu proje, Python dünyasındaki modern API geliştirme araçlarını (FastAPI) ve veri analizi kütüphanelerini (Pandas, Numpy, Matplotlib, Seaborn) öğrenmek amacıyla oluşturulmuş bir çalışma alanıdır.
 
 ## 🎯 Motivasyon (Neden?)
 
@@ -13,7 +13,7 @@ Yazılım geliştirme sürecinde sadece kod yazmak değil, veriyi anlamlandırma
 ## 📂 Dosya Yapısı
 
 - `main.py`: FastAPI ile oluşturulmuş temel API uç noktaları (GET/POST örnekleri).
-- `vgsalesanaliz.py`: Video oyun satış verileri (`vgsales.csv`) üzerinde yapılan **gelişmiş bölgesel analizler** ve görselleştirmeler.
+- `vgsalesanaliz.py`: Video oyun satış verileri (`vgsales.csv`) üzerinde yapılan **gelişmiş bölgesel ve yıllık analizler**.
 - `trafikanaliz.py`: Trafik verileri (`trafik_verisi.csv`) üzerinden analiz yapan ve görsel rapor üreten script.
 - `pandasdeneme.py` & `numpydeneme.py`: Bu kütüphanelerin temel özelliklerini test etmek için oluşturulmuş örnek scriptler.
 - `requirements.txt`: Projenin çalışması için gerekli kütüphanelerin listesi.
@@ -21,7 +21,7 @@ Yazılım geliştirme sürecinde sadece kod yazmak değil, veriyi anlamlandırma
 
 ## 📊 Gelişmiş Analiz Özellikleri (vgsalesanaliz.py)
 
-Projenin son aşamasında, video oyun satış verileri üzerinde bölgesel bazda derinlemesine analizler yapılmıştır:
+Projenin son aşamasında, video oyun satış verileri üzerinde bölgesel ve zamansal derinlemesine analizler yapılmıştır:
 
 ### 1. Bölgesel Satış Görselleştirme
 Seaborn kütüphanesi kullanılarak 2x2 subplot yapısında 4 farklı bölge için (Japonya, Kuzey Amerika, Avrupa, Diğer) en popüler 5 oyun türü görselleştirilmiştir.
@@ -36,6 +36,16 @@ Veri seti üzerinde yapılan sorgularla bölgelere göre en çok satan oyunlar v
 | **Avrupa (EU)** | Wii Sports | Sports |
 | **Japonya (JP)** | Pokemon Red/Pokemon Blue | Role-Playing |
 | **Diğer (Other)** | Grand Theft Auto: San Andreas | Action |
+
+### 3. Yıllara Göre Tahtın Sahipleri (Best Sellers By Years)
+1980'den itibaren her yılın küresel satış şampiyonları Pandasta `groupby` ve `idxmax` fonksiyonları ile analiz edilmiştir. Bazı önemli yıllar:
+
+- **1985**: Super Mario Bros. (40.24M)
+- **1989**: Tetris (30.26M)
+- **1996**: Pokemon Red/Blue (31.37M)
+- **2004**: GTA: San Andreas (20.81M)
+- **2006**: Wii Sports (82.74M - Tüm zamanların rekoru!)
+- **2013**: Grand Theft Auto V (21.40M)
 
 ## 🛠️ Kurulum
 
@@ -57,6 +67,7 @@ Projeyi yerelinizde çalıştırmak için şu adımları izleyebilirsiniz:
    ```
 
 ## 📈 Öğrenim Notları
+- **Zaman Serisi Analizi**: Yıllara göre veriyi gruplayarak trendleri takip etme.
 - **Veri Gruplama**: `groupby()` ve `idxmax()` fonksiyonları ile karmaşık veri setlerinden spesifik bilgiler çıkarma.
 - **Görselleştirme**: Birden fazla grafiği (`plt.subplots`) tek bir pencerede düzenli şekilde sunma.
 - **API Geliştirme**: Pydantic modelleri ile veri doğrulama ve asenkron işlem yönetimi.
